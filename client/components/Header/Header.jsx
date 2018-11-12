@@ -1,23 +1,50 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+// import PropTypes from 'prop-types';
 
 import './Header.scss';
 
-const header = () => (
-  <header className="AppBar">
-    <nav className="AppBar_Nav">
-      <div />
-      <div className="AppBar_logo">
-        <a href="/">Coding Resources</a>
-      </div>
-      <div className="spacer" />
-      <div className="AppBar_select">
-        <ul>
-          <li><a href="/">Log in</a></li>
-          <li><a href="/">Sign up</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-);
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
 
-export default header;
+function NavBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" color="inherit" className={classes.grow}>
+            Programming Reference Site
+          </Typography>
+          <Button color="inherit">Login</Button>
+          <Button color="inherit">Sign up</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+}
+
+// NavBar.propTypes = {
+//   classes: PropTypes.object.isRequired,
+// };
+
+export default withStyles(styles)(NavBar);
