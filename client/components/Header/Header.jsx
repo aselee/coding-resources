@@ -10,6 +10,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import './Header.scss';
 
+// NavBar
+// login and sign in buttons
+// Menu button 
+
+// eslint doesnt like proptypes object
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -43,8 +49,8 @@ function NavBar(props) {
   );
 }
 
-// NavBar.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
+NavBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(NavBar);
