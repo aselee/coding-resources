@@ -19,4 +19,8 @@ Please feel free to add any input on this ongoing project! We would love to hear
 
 ## Material-ui
 - npm install @material-ui/core
+<<<<<<< HEAD
 - npm install @material-ui/icons 
+=======
+- npm install @material-ui/icons 
+>>>>>>> ea25a16816797e1bfe639b889c38d732439ab620
