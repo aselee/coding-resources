@@ -9,6 +9,9 @@ import './App.scss';
 
 
 export class Main extends React.Component {
+  state = {
+    
+  }
   render() {
     return(
       <div classname="App">
