@@ -12,3 +12,4 @@ mongoose
   .catch(() => console.log('Unable to connect to database. Please check credentials'));
 
 app.listen(config.port, () => console.log(`Server is listening on port ${config.port}`));
+ 
