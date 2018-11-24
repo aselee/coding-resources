@@ -63,7 +63,7 @@ const styles = theme => ({
   },
 });
 
-class Sidebar extends React.Component {
+class SideBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { mobileOpen: false };
@@ -142,11 +142,11 @@ class Sidebar extends React.Component {
   }
 }
 
-Sidebar.propTypes = {
+SideBar.propTypes = {
   container: PropTypes.shape({}),
   theme: PropTypes.shape({}),
   classes: PropTypes.shape({}),
   children: PropTypes.shape({}),
 };
 
-export default withStyles(styles, { withTheme: true })(Sidebar);
+export default withStyles(styles, { withTheme: true })(SideBar);
