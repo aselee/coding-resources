@@ -10,7 +10,37 @@ class App extends React.Component {
     isLoggedIn: false,
   };
 
-export default app;
+  async componentDidMount() {
+    const { categories } = await api.getCategories();
+    this.setState({ categories });
+  }
 
+  setLogin = () => this.setState({ isLoggedIn: true });
 
+  setLogout = () => this.setState({ isLoggedIn: false });
 
+  render() {
+    const { categories, isLoggedIn } = this.state;
+
+    return (
+      <>
+        <NavBar
+          isLoggedIn={isLoggedIn}
+          setLogout={this.setLogout}
+        />
+        <Sidebar
+          sidebar={<Categories categories={categories} />}
+          open
+          docked
+          rootClassName="sidebarRoot"
+        >
+          <Main
+            categories={categories}
+            setLogin={this.setLogin}
+          />
+        </Sidebar>
+      </>
+    );
+  }
+}
+export default App;

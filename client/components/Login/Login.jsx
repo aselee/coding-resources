@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Paper, Checkbox, Avatar, TextField, Button, Typography, Divider, FormControlLabel } from '@material-ui/core';
-=======
 import { Link } from 'react-router-dom';
->>>>>>> master
 import LockIcon from '@material-ui/icons/LockOutlined';
 import {
   Checkbox,
@@ -80,10 +76,6 @@ const Login = ({ setLogin, history }) => {
         label="Remember me"
       />
     </form>
-<<<<<<< HEAD
-  </Paper>
-);
-=======
 
     <Divider className="form-spacer" />
 
@@ -98,6 +90,5 @@ const Login = ({ setLogin, history }) => {
   </>
   );
 };
->>>>>>> master
 
 export default Login;
